@@ -49,7 +49,10 @@ Instead of relying on heavy third-party facial recognition wrappers, this projec
 ### 1. Eye Aspect Ratio (EAR) - Catching closed eyes & downward gaze
 
 The system calculates the physical distance between the eyelids. If you look down at a phone in your lap, your eyelids naturally lower, causing the EAR to drop without requiring a full neck bend.
+
 <img width="405" height="269" alt="Screenshot 2026-05-28 at 1 40 06 AM" src="https://github.com/user-attachments/assets/59337399-ea7a-46f3-9095-38078c3fd8bc" />
+
+
 $$EAR = \frac{||p_2 - p_6|| + ||p_3 - p_5||}{2 ||p_1 - p_4||}$$
 
 _If the calculated $EAR$ drops below `0.22`, the system flags a downward gaze._
