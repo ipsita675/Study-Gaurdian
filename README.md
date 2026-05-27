@@ -32,7 +32,7 @@ deep-focus-guardian/
 └── README.md
 ```
 
-## 🚀 The Tech Stack
+## The Tech Stack
 
 Communication happens in real-time via WebSockets to ensure zero-lag computer vision inference without freezing the UI thread.
 
@@ -42,7 +42,7 @@ Communication happens in real-time via WebSockets to ensure zero-lag computer vi
 
 ---
 
-## 🧮 The Mathematics Behind the AI
+## The Mathematics Behind the AI
 
 Instead of relying on heavy third-party facial recognition wrappers, this project calculates geometric distances using `math.hypot` (Euclidean distance) on raw MediaPipe 3D landmarks.
 
@@ -68,7 +68,7 @@ Runs YOLOv8n inference on incoming WebSocket frames to explicitly detect the `ce
 
 ---
 
-## 💻 How to Run Locally
+## How to Run Locally
 
 ### Prerequisites
 
