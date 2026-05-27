@@ -50,18 +50,19 @@ Instead of relying on heavy third-party facial recognition wrappers, this projec
 
 The system calculates the physical distance between the eyelids. If you look down at a phone in your lap, your eyelids naturally lower, causing the EAR to drop without requiring a full neck bend.
 
-<img width="405" height="269" alt="Screenshot 2026-05-28 at 1 40 06 AM" src="https://github.com/user-attachments/assets/59337399-ea7a-46f3-9095-38078c3fd8bc" />
+<img width="810" height="538" alt="Screenshot 2026-05-28 at 1 40 06 AM" src="https://github.com/user-attachments/assets/d8b3315e-f990-44ec-8134-60956f215632" />
+
 
 
 $$EAR = \frac{||p_2 - p_6|| + ||p_3 - p_5||}{2 ||p_1 - p_4||}$$
 
-_If the calculated $EAR$ drops below `0.22`, the system flags a downward gaze._
+_If the calculated EAR drops below `0.22`, the system flags a downward gaze._
 
 ### 2. Head Yaw Tracking - Catching looking away
 
 To track if a user turns their head to watch TV or look away from the screen, the system measures the Euclidean distance from the tip of the nose to the left and right ears.
 
-$$Yaw Ratio = \frac{Distance(Nose, Left Ear)}{Distance(Nose, Right Ear)}$$
+$$Yaw  Ratio = \frac{Distance(Nose, Left Ear)}{Distance(Nose, Right Ear)}$$
 
 _A user looking straight ahead yields a ratio of ~`1.0`. The system triggers the distraction alarm if the ratio drops below `0.75` or spikes above `1.25`._
 
